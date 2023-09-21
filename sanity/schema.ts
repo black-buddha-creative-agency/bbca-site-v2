@@ -1,10 +1,39 @@
-import { type SchemaTypeDefinition } from 'sanity'
+import { type SchemaTypeDefinition } from "sanity";
 
-import blockContent from './schemas/blockContent'
-import category from './schemas/category'
-import post from './schemas/post'
-import author from './schemas/author'
+import activation from "./schemas/activation";
+import artist from "./schemas/artist";
+import blockContent from "./schemas/blockContent";
+import contact from "./schemas/contact";
+import curator from "./schemas/curator";
+import event from "./schemas/event";
+import exhibitionType from "./schemas/exhibitionType";
+import gallery from "./schemas/gallery";
+import home from "./schemas/home";
+import imageGallery from "./schemas/imageGallery";
+import link from "./schemas/link";
+import sponsor from "./schemas/sponsor";
+
+import about from "./schemas/home/about";
+import hero from "./schemas/home/hero";
+import services from "./schemas/home/services";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [post, author, category, blockContent],
-}
+	types: [
+		activation,
+		artist,
+		blockContent,
+		contact,
+		curator,
+		event,
+		exhibitionType,
+		gallery,
+		home,
+		imageGallery,
+		link,
+		sponsor,
+
+		about,
+		hero,
+		services,
+	],
+};
