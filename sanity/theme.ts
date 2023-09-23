@@ -1,10 +1,10 @@
 import { buildLegacyTheme } from "sanity";
 
 export const colors = {
-	"--my-white": "#fff",
-	"--my-black": "#1a1a1a",
+	"--my-white": "#fafafa",
+	"--my-black": "#24272b",
 
-	"--bbca-brand": "#af0707",
+	"--bbca-brand": "#ada4a4",
 
 	"--my-red": "#db4437",
 	"--my-yellow": "#f4b400",
@@ -19,8 +19,8 @@ export const myTheme = buildLegacyTheme({
 	"--gray": "#666",
 	"--gray-base": "#666",
 
-	"--component-bg": colors["--my-black"],
-	"--component-text-color": colors["--my-white"],
+	"--component-bg": colors["--my-white"],
+	"--component-text-color": colors["--my-black"],
 
 	// Brand
 	"--brand-primary": colors["--bbca-brand"],
@@ -39,8 +39,8 @@ export const myTheme = buildLegacyTheme({
 	"--state-danger-color": colors["--my-red"],
 
 	// Navbar
-	"--main-navigation-color": colors["--my-black"],
-	"--main-navigation-color--inverted": colors["--my-white"],
+	"--main-navigation-color": colors["--my-white"],
+	"--main-navigation-color--inverted": colors["--my-black"],
 
 	"--focus-color": colors["--bbca-brand"],
 });

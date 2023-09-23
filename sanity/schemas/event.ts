@@ -53,8 +53,8 @@ export default defineType({
 		defineField({
 			name: "exhibitionType",
 			title: "Exhibition Type",
-			type: "reference",
-			to: { type: "exhibitionType" },
+			type: "array",
+			of: [{ type: "reference", to: { type: "exhibitionType" } }],
 		}),
 		defineField({
 			name: "activations",
