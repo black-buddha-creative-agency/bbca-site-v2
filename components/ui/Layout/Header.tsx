@@ -21,11 +21,11 @@ function Header() {
 					/>
 				</div>
 			</div>
-			<MobileNav
+			{/* <MobileNav
 				navigation={navigation}
 				mobileMenuOpen={mobileMenuOpen}
 				setMobileMenuOpen={setMobileMenuOpen}
-			/>
+			/> */}
 		</header>
 	);
 }

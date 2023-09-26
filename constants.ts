@@ -1,5 +1,11 @@
 import { Metadata } from "next";
 
+export const COLORS = {
+	PRIMARY: "#ada4a4",
+	SECONDARY: "#162466",
+	TEXT: "#24272b",
+	HEADING: "#3c393c",
+};
 export const navigation: Navigation[] = [
 	{
 		label: "Home",
