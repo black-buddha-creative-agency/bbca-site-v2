@@ -36,7 +36,7 @@ export default function RootLayout({
 		: undefined;
 	return (
 		<html lang="en">
-			<body className={`${lato.className} bg-[#fafafa]`}>
+			<body className={`${prozaLibre.variable} ${lato.variable} bg-[#fafafa]`}>
 				{preview && preview.token && (
 					<div className="fixed bottom-0 left-0 ml-6 mb-6 w-screen">
 						<Link
