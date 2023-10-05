@@ -1,6 +1,12 @@
 import { Metadata } from "next";
 
-export const navigation: Navigation[] = [
+export const COLORS = {
+	PRIMARY: "#ada4a4",
+	SECONDARY: "#162466",
+	TEXT: "#24272b",
+	HEADING: "#3c393c",
+};
+export const navigation: Link[] = [
 	{
 		label: "Home",
 		value: "home",
@@ -25,6 +31,19 @@ export const navigation: Navigation[] = [
 		label: "Contact",
 		value: "contact",
 		href: "/contact",
+	},
+];
+
+export const footer: Link[] = [
+	{
+		label: "Instagram",
+		value: "instagram",
+		href: "https://www.instagram.com/blackbuddhababy",
+	},
+	{
+		label: "Facebook",
+		value: "facebook",
+		href: "https://www.facebook.com/blackbuddhababy",
 	},
 ];
 
