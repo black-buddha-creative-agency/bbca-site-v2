@@ -6,18 +6,18 @@ import { draftMode } from "next/headers";
 import Link from "next/link";
 
 import Loading from "./loading";
-import { Header } from "@/components";
+import { Header, Footer } from "@/components";
 
 import { homeMeta } from "@/constants";
 
 const lato = Lato({
-	weight: "400",
+	weight: ["100", "300", "400", "700", "900"],
 	subsets: ["latin"],
 	variable: "--font-lato",
 });
 
 const prozaLibre = Proza_Libre({
-	weight: "700",
+	weight: ["400", "500", "600", "700", "800"],
 	subsets: ["latin"],
 	variable: "--font-proza-libre",
 });
@@ -48,7 +48,12 @@ export default function RootLayout({
 					</div>
 				)}
 				<Header />
-				<Suspense fallback={<Loading />}>{children}</Suspense>
+				<Suspense fallback={<Loading />}>
+					<main className="mx-auto max-w-[120rem] px-8 min-h-screen ">
+						{children}
+					</main>
+				</Suspense>
+				<Footer />
 			</body>
 		</html>
 	);

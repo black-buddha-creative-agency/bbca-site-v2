@@ -12,7 +12,7 @@ function Header() {
 
 	return (
 		<header className="inset-x-0 top-0 z-50  pb-4">
-			<div className="mx-auto max-w-7xl">
+			<div className="mx-auto max-w-[120rem]">
 				<div className="px-6 pt-6  lg:pl-8 lg:pr-0">
 					<Navbar
 						navigation={navigation}
