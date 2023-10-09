@@ -20,3 +20,42 @@ type ImageGallery = {
 	_type: string;
 	_key: string;
 };
+
+type Hero = {
+	tagline: string;
+	subheading: string;
+	image: Image;
+	_type: string;
+	_key: string;
+};
+
+type About = {
+	description: Array;
+	title: string;
+	_type: string;
+	_key: string;
+};
+
+type Contact = {
+	title: string;
+	description: Array;
+	_type: string;
+	_key: string;
+};
+
+type HomeImages = {
+	images: Array<Image>;
+	_type: string;
+	_key: string;
+};
+
+type HomeServices = {
+	services: Array;
+	title: string;
+	_type: string;
+	_key: string;
+};
+
+type HomePageBuilder = Array<
+	Hero | About | Contact | HomeImages | HomeServices | Image
+>;
