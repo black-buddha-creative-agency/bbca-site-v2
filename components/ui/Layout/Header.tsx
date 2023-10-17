@@ -3,10 +3,10 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 import Navbar from "./Navbar";
-// import MobileNav from "./MobileNav";
+import MobileNav from "./MobileNav";
 import { navigation } from "@/constants";
 
-function Header() {
+const Header: React.FC = () => {
 	const currentRoute = usePathname();
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -21,13 +21,13 @@ function Header() {
 					/>
 				</div>
 			</div>
-			{/* <MobileNav
+			<MobileNav
 				navigation={navigation}
 				mobileMenuOpen={mobileMenuOpen}
 				setMobileMenuOpen={setMobileMenuOpen}
-			/> */}
+			/>
 		</header>
 	);
-}
+};
 
 export default Header;

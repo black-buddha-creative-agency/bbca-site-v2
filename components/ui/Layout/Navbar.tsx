@@ -3,7 +3,6 @@
 import Link from "next/link";
 
 import { Bars3Icon } from "@heroicons/react/24/solid";
-import { COLORS } from "@/constants";
 
 interface NavbarProps {
 	currentRoute: string;
@@ -13,11 +12,14 @@ interface NavbarProps {
 
 function Navbar({ currentRoute, navigation, setMobileMenuOpen }: NavbarProps) {
 	return (
-		<nav className="flex items-center justify-between pr-6" aria-label="Global">
+		<nav
+			className="flex items-center justify-between lg:pr-6"
+			aria-label="Global"
+		>
 			<Link href="/">
 				<span className="sr-only">Black Buddha Creative Agency</span>
 				<h1 className="text-4xl font-proza-libre font-normal">
-					BB<span className={`text-[${COLORS.PRIMARY}]`}>CA</span>
+					BB<span className="text-primary">CA</span>
 				</h1>
 			</Link>
 			<button
