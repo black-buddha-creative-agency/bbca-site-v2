@@ -35,7 +35,7 @@ type About = {
 	_type: string;
 	_key: string;
 };
-
+ 
 type Contact = {
 	title: string;
 	description: Array;
