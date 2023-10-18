@@ -8,10 +8,10 @@ import {
 } from "@/components";
 
 const EventsPage = ({
-	events = [],
+	events,
 	eventPageData = [],
 }: {
-	events: BBCAEvent[];
+	events: SanityDocument<BBCAEvent>;
 	eventPageData: SanityDocument[];
 }) => {
 	return (

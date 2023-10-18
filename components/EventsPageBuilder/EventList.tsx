@@ -3,8 +3,9 @@ import { useState } from "react";
 
 import BlockContent from "../ui/BlockContent";
 import EventListItem from "./EventListItem";
+import { SanityDocument } from "next-sanity";
 
-const EventList = ({ events }: { events: BBCAEvent[] }) => {
+const EventList = ({ events }: { events: SanityDocument<BBCAEvent> }) => {
 	const [eventsOpen, setEventsOpen] = useState(events);
 
 	const handleClick = (eventId: string) => {
