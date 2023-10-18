@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Proza+Libre&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,11 +10,21 @@
 	--background-end-rgb: 255, 255, 255;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 @media (prefers-color-scheme: dark) {
 	:root {
 		--foreground-rgb: 255, 255, 255;
 		--background-start-rgb: 0, 0, 0;
 		--background-end-rgb: 0, 0, 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
 	}
 }
 
@@ -24,5 +36,9 @@ body {
 h1,
 h2,
 h3 {
-	font-family: var(--font-proza-libre);
+	font-family: "Proza Libre", sans-serif;
+}
+
+p {
+	font-family: "Lato", sans-serif;
 }

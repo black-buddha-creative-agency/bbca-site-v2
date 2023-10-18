@@ -1,8 +1,6 @@
 import { type Config } from "tailwindcss";
 const colors = require("tailwindcss/colors");
 
-import { COLORS } from "./constants";
-
 module.exports = {
 	content: [
 		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,6 +9,9 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			fontSize: {
+				header: ["3rem", "1.5"],
+			},
 			fontFamily: {
 				lato: "var(--font-lato)",
 				"proza-libre": "var(--font-proza-libre)",
@@ -31,5 +32,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [require("@tailwindcss/typography")],
 } satisfies Config;

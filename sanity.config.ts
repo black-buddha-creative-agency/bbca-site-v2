@@ -17,7 +17,7 @@ import defaultDocumentNode from "./sanity/lib/defaultDocumentNode";
 
 const singletonActions = new Set(["publish", "discardChanges", "restore"]);
 
-const singletonTypes = new Set(["home", "contact"]);
+const singletonTypes = new Set(["home", "contact", "eventPage"]);
 
 export default defineConfig({
 	basePath: "/studio",
@@ -88,6 +88,26 @@ export default defineConfig({
 													process.env.NODE_ENV === "development"
 														? `http://localhost:3000/api/preview?view=contact`
 														: `https://www.blackbuddhacreativeagency.com/api/preview?view=contact`,
+											})
+											.title("Preview"),
+									])
+							),
+						S.listItem()
+							.title("Event Page")
+							.id("eventPage")
+							.child(
+								S.document()
+									.schemaType("eventPage")
+									.documentId("eventPage")
+									.views([
+										S.view.form(),
+										S.view
+											.component(Iframe)
+											.options({
+												url:
+													process.env.NODE_ENV === "development"
+														? `http://localhost:3000/api/preview?view=event`
+														: `https://www.blackbuddhacreativeagency.com/api/preview?view=event`,
 											})
 											.title("Preview"),
 									])

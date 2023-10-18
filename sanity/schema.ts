@@ -6,6 +6,7 @@ import blockContent from "./schemas/blockContent";
 import contact from "./schemas/contact";
 import curator from "./schemas/curator";
 import event from "./schemas/event";
+import eventPage from "./schemas/eventPage";
 import exhibitionType from "./schemas/exhibitionType";
 import gallery from "./schemas/gallery";
 import home from "./schemas/home";
@@ -25,6 +26,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
 		contact,
 		curator,
 		event,
+		eventPage,
 		exhibitionType,
 		gallery,
 		home,
