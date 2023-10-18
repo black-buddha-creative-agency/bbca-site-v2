@@ -8,7 +8,7 @@ export default function PreviewEvents({
 	events,
 	eventPageData,
 }: {
-	events: SanityDocument<BBCAEvent>;
+	events: SanityDocument<BBCAEvent>[];
 	eventPageData: SanityDocument[];
 }) {
 	const [data] = useLiveQuery(events, eventsQuery);

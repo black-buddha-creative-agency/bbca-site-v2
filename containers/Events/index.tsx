@@ -11,7 +11,7 @@ const EventsPage = ({
 	events,
 	eventPageData = [],
 }: {
-	events: SanityDocument<BBCAEvent>;
+	events: SanityDocument<BBCAEvent>[];
 	eventPageData: SanityDocument[];
 }) => {
 	return (
