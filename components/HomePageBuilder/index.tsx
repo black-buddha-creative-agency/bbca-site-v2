@@ -37,12 +37,16 @@ const getHomePageComponent = (
 	if (_type === "image") {
 		const ImageComponent = Component as ({
 			value,
+			classNames,
 		}: {
 			value?: any;
+			classNames?: string;
 		}) => JSX.Element;
-		return <ImageComponent value={rest} />;
+		return (
+			<ImageComponent key={index} value={rest} classNames="w-full mb-20" />
+		);
 	} else {
-		return Component ? <Component key={_key} {...rest} /> : null;
+		return Component ? <Component key={_key + index} {...rest} /> : null;
 	}
 };
 

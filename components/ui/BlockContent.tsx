@@ -20,7 +20,7 @@ const components = {
 	},
 	block: {
 		normal: ({ children }: any) => (
-			<p className="font-light mb-3 leading-8 text-textColor text-[1.3rem] ">
+			<p className="font-light mb-3 leading-8 text-textColor text-normal md:text-[1.3rem]">
 				{children}
 			</p>
 		),

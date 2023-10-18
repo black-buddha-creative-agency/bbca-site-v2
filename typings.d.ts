@@ -50,9 +50,14 @@ type HomeImagesSection = {
 	_type: string;
 	_key: string;
 };
+type HomeService = {
+	title: string;
+	_type: string;
+	_key: string;
+};
 
 type HomeServicesSection = {
-	services: Array;
+	services: HomeService[];
 	title: string;
 	_type: string;
 	_key: string;

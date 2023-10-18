@@ -4,7 +4,7 @@ import BlockContent from "../ui/BlockContent";
 
 const About = ({ title, description }: AboutSection) => {
 	return (
-		<Section id="about">
+		<Section id="about" classNames="lg:mt-32 mb-10">
 			<SectionHeading text={title} />
 			<div className="col-span-2">
 				<BlockContent value={description} />

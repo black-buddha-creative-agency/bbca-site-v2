@@ -11,7 +11,7 @@ const Header: React.FC = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 	return (
-		<header className="inset-x-0 top-0 z-50  pb-4">
+		<header className="inset-x-0 top-0 z-50  pb-4 fixed bg-[#fafafa]">
 			<div className="mx-auto max-w-[120rem]">
 				<div className="px-6 pt-6  lg:pl-8 lg:pr-0">
 					<Navbar

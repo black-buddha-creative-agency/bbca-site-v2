@@ -4,7 +4,14 @@ import { useNextSanityImage, UseNextSanityImageProps } from "next-sanity-image";
 import { getClient } from "@/sanity/lib/getClient";
 import { ImageLoader } from "next/image";
 
-function ImageComponent({ value }: { value?: any }) {
+import { cn } from "@/lib/utils";
+function ImageComponent({
+	value,
+	classNames,
+}: {
+	value?: any;
+	classNames?: string;
+}) {
 	const client = getClient();
 
 	const imageProps: UseNextSanityImageProps | null = useNextSanityImage(
@@ -15,7 +22,7 @@ function ImageComponent({ value }: { value?: any }) {
 	return (
 		<div className="my-2">
 			<Image
-				className="w-full h-auto"
+				className={cn(`${classNames || ""}`)}
 				{...(imageProps as any)}
 				alt={value?.alt || `Carousel Image ${value?._key}`}
 				// className="object-contain"
