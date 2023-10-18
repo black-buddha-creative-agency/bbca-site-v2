@@ -4,6 +4,13 @@ type Link = {
 	href: string;
 };
 
+type SocialLink = {
+	title: string;
+	url: string;
+	_type: string;
+	_key: string;
+};
+
 type Image = {
 	asset: {
 		_type: string;
@@ -11,7 +18,7 @@ type Image = {
 	};
 	_type: string;
 	_key: string;
-	alt: string;
+	alt?: string;
 };
 
 type ImageGallery = {
@@ -71,3 +78,96 @@ type HomePageBuilderArray = Array<
 	| HomeServicesSection
 	| Image
 >;
+
+type BBCAEvent = {
+	title: string;
+	slug: {
+		current: string;
+		type: string;
+	};
+	eventDate: string;
+	description: Array;
+	curators: Array<Curator>;
+	artists: Array<Artist>;
+	sponsors: Array<Sponsor>;
+	exhibitionType: Array<ExhibitionType>;
+	activations: Array<Activation>;
+	eventImages: {
+		images: Array<Image>;
+		display: string;
+		_type: string;
+	};
+	socialLinks: Array<SocialLink>;
+	isOpen: boolean;
+	_type: string;
+	_key: string;
+	_id: string;
+};
+
+type Sponsor = {
+	name: string;
+	slug: {
+		current: string;
+		type: string;
+	};
+	website?: string;
+	_type: string;
+	_id: string;
+	_updatedAt: string;
+	_createdAt: string;
+	_rev: string;
+};
+
+type ExhibitionType = {
+	title: string;
+	_type: string;
+	_id: string;
+	_updatedAt: string;
+	_createdAt: string;
+	_rev: string;
+};
+
+type Artist = {
+	_id: string;
+	name: string;
+	slug: {
+		current: string;
+		type: string;
+	};
+	link?: {
+		title;
+		url;
+	};
+	_type: string;
+	_updatedAt: string;
+	_createdAt: string;
+	_rev: string;
+};
+
+type Curator = {
+	_id: string;
+	name: string;
+	slug: {
+		current: string;
+		type: string;
+	};
+	website?: string;
+	_type: string;
+	_updatedAt: string;
+	_createdAt: string;
+	_rev: string;
+};
+
+type Activation = {
+	_id: string;
+	title: string;
+	slug: {
+		current: string;
+		type: string;
+	};
+	description: Array;
+	_type: string;
+	_updatedAt: string;
+	_createdAt: string;
+	_rev: string;
+};

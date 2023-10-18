@@ -35,3 +35,21 @@ export const homeQuery = groq`*[_type == "home"]{
     }
   }
 }`;
+
+export const eventPageQuery = groq`*[_type == "eventPage"]`;
+
+export const eventsQuery = groq`*[_type == "event"]{
+  _id,
+  title,
+  slug,
+  eventDate,
+  description,
+  artists[]->,
+  sponsors[]->,
+  curators[]->,
+  exhibitionType[]->,
+  activations[]->,
+  eventImages,
+  socialLinks,
+  isOpen,
+}`;
