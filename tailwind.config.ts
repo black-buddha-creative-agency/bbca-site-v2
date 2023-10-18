@@ -1,8 +1,6 @@
 import { type Config } from "tailwindcss";
 const colors = require("tailwindcss/colors");
 
-import { COLORS } from "./constants";
-
 module.exports = {
 	content: [
 		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -31,5 +29,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [require("@tailwindcss/typography")],
 } satisfies Config;

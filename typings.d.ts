@@ -35,7 +35,7 @@ type About = {
 	_type: string;
 	_key: string;
 };
- 
+
 type Contact = {
 	title: string;
 	description: Array;
@@ -56,6 +56,6 @@ type HomeServices = {
 	_key: string;
 };
 
-type HomePageBuilder = Array<
+type HomePageBuilderArray = Array<
 	Hero | About | Contact | HomeImages | HomeServices | Image
 >;

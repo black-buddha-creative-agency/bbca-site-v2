@@ -18,14 +18,20 @@ export const homeQuery = groq`*[_type == "home"]{
       title,
       description
     },
-    _type == "homeImages" => {
+    _type == "images" => {
       _type,
       images
     },
-    _type == "homeServices" => {
+    _type == "services" => {
       _type,
       title,
       services
+    },
+    _type == "image" => {
+      _type,
+      asset,
+      alt,
+      _key
     }
   }
 }`;
