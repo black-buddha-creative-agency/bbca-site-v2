@@ -21,35 +21,37 @@ type ImageGallery = {
 	_key: string;
 };
 
-type Hero = {
+type HeroSection = {
 	tagline: string;
 	subheading: string;
 	image: Image;
 	_type: string;
 	_key: string;
+	key: string;
 };
 
-type About = {
+type AboutSection = {
 	description: Array;
 	title: string;
 	_type: string;
 	_key: string;
+	key: string;
 };
 
-type Contact = {
+type ContactSection = {
 	title: string;
 	description: Array;
 	_type: string;
 	_key: string;
 };
 
-type HomeImages = {
+type HomeImagesSection = {
 	images: Array<Image>;
 	_type: string;
 	_key: string;
 };
 
-type HomeServices = {
+type HomeServicesSection = {
 	services: Array;
 	title: string;
 	_type: string;
@@ -57,5 +59,10 @@ type HomeServices = {
 };
 
 type HomePageBuilderArray = Array<
-	Hero | About | Contact | HomeImages | HomeServices | Image
+	| HeroSection
+	| AboutSection
+	| ContactSection
+	| HomeImagesSection
+	| HomeServicesSection
+	| Image
 >;

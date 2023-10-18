@@ -2,21 +2,12 @@ import Link from "next/link";
 import { PortableText } from "@portabletext/react";
 
 import ImageComponent from "./Image";
-import GridGallery from "./GridGallery";
-import CarouselGallery from "./CarouselGallery";
 import VideoPlayer from "./VideoPlayer";
 
 const components = {
 	types: {
 		image: ({ value }: any) => <ImageComponent value={value} />,
-		imageGallery: ({ value }: any) => {
-			switch (value?.display) {
-				case "grid":
-					return <GridGallery value={value} />;
-				case "carousel":
-					return <CarouselGallery value={value} />;
-			}
-		},
+
 		videoEmbed: ({ value }: any) => <VideoPlayer url={value.url} />,
 	},
 	list: {
@@ -29,7 +20,9 @@ const components = {
 	},
 	block: {
 		normal: ({ children }: any) => (
-			<p className="font-light mb-3 leading-6">{children}</p>
+			<p className="font-light mb-3 leading-8 text-textColor text-[1.3rem] ">
+				{children}
+			</p>
 		),
 		h1: ({ children }: any) => (
 			<h1 className="text-5xl py-10 font-bold">{children}</h1>

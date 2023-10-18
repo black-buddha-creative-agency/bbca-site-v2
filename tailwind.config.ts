@@ -9,6 +9,9 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			fontSize: {
+				header: ["3rem", "1.5"],
+			},
 			fontFamily: {
 				lato: "var(--font-lato)",
 				"proza-libre": "var(--font-proza-libre)",

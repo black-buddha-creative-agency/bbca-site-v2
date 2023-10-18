@@ -6,10 +6,10 @@ import HomeServices from "./HomeServices";
 import Image from "../ui/Image";
 
 const getHomePageComponent = (
-	{ _type, ...rest }: { _type: string },
+	{ _type, _key, ...rest }: { _type: string; _key: string },
 	index: number
 ) => {
-	let Component;
+	let Component: any;
 
 	switch (_type) {
 		case "hero":
@@ -40,9 +40,9 @@ const getHomePageComponent = (
 		}: {
 			value?: any;
 		}) => JSX.Element;
-		return <ImageComponent key={index} value={rest} />;
+		return <ImageComponent value={rest} />;
 	} else {
-		return Component ? <Component key={index} {...rest} /> : null;
+		return Component ? <Component key={_key} {...rest} /> : null;
 	}
 };
 
